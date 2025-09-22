@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Web Page</title>
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <div class="container">
+        <h1>Sudoku</h1>
+        <header class="game-header">
+            <div class="difficulty-controls">
+                <strong>Obtížnost:</strong>
+                <button id="btn-easy">Lehká</button>
+                <button id="btn-medium">Střední</button>
+                <button id="btn-hard">Těžká</button>
+            </div>
+            <div class="game-info">
+                <span>Čas: <span id="timer">00:00</span></span>
+                <button id="btn-new-game">Nová hra</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="game-board"></div>
+        </main>
+
+        <footer class="input-area">
+            <div id="number-pad">
+                <!-- Čísla 1-9 budou vygenerována pomocí JS -->
+            </div>
+            <div class="notes-control">
+                <label for="notes-toggle">Režim poznámek</label>
+                <input type="checkbox" id="notes-toggle" />
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
